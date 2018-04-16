@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		  <title>Portfolio</title>
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		  
+		  <script src="scripts/clock.js" type="text/javascript"></script>
+		  <script>
+
+		  
+				window.onload = function(){
+					var canvas = document.getElementById("canvasClock");
+					var context = canvas.getContext("2d");
+					var radius = canvas.height / 2;
+					context.translate(radius, radius);
+					radius = radius * 0.75;			
+					drawClock(context, radius);
+					setInterval(function(){drawClock(context, radius);}, 1000);
+				}
+				
+				
+		  </script>
+		  <link rel="stylesheet" href="css/custom.css" />
+
+	</head>
+	<body class="pageBackground">
+		<div class="container-fluid">
+			<div class="row">
+			
+				<div class="col-sm-2">
+				</div>
+				<div class="col-sm-8" id="whitepanel" style="background-color: #ffffff;padding:0px;">
+		
+					<nav class="navbar navbar-default navbar-static-top navBar" id="menu">
+						<div class="container-fluid">
+							<ul class="nav navbar-nav" >
+								<li><a href="index.html" style="color:#FFFFFF;" ><span class="glyphicon glyphicon-briefcase"></span>  Projects</a></li>
+								<li><a href="about.html" style="color:#FFFFFF;" ><span class="glyphicon glyphicon-user"></span>  About</a></li>
+								<li><a href="resume.html" style="color:#FFFFFF;" ><span class="glyphicon glyphicon-list-alt"></span>  Resume</a></li>
+								<li><a href="contact.html" style="color:#FFFFFF;" ><span class="glyphicon glyphicon-envelope"></span>  Contact</a></li>
+							</ul>	
+							<ul class="nav navbar-nav navbar-right" style="padding:0;">
+								<li><canvas id="canvasClock" data-toggle="tooltip" data-placement="bottom" title="Tiny clock!" style="margin-right:15px;margin-left:15px;margin-top:7px;" width="60" height="60" ></canvas></li>
+							</ul>
+						</div>
+					</nav>
+			
+					<div class="pageContent">
+							
+							<h1>My resume</h1>
+					
+							<div class="subsection">
+								<h4><strong>OBJECTIVE</strong></h4>
+								<p>An entry-level position in IT field.</p>
+							</div>
+							
+							<div class="subsection">
+								<h4><strong>PROFILE</strong></h4>
+								<ul>
+									<li>Completed Seneca College's Computer Programming and Analysis Advanced Diploma program with a 3.6 GPA.</li>
+									<li>Almost 2 years work experience in software development field.</li>
+									<li>Strong research, written, verbal communication, and teamwork skills.</li>
+									<li>Solid skills in developing and debugging computer programs, experience with web development and databases.</li>
+								</ul>
+							</div>
+							
+							<div class="subsection">							
+								<h4><strong>TECHNICAL SKILLS</strong></h4>
+								<table class="table table-bordered table-striped">
+									<tr>
+										<th style="width:200px;">Languages:</th>
+										<td>C, C++, C#, Java, JavaScript, CSS3, HTML5, PHP, SQL, PL/SQL, Hibernate, Visual Basic for Applications</td>
+									</tr>
+									<tr>
+										<th>Operating Systems:</th> 
+										<td>Windows XP/7/10, Windows Server R2 2008, UNIX/Linux, Apache, Android 6</td>
+									</tr>
+									<tr>
+										<th>Tools:</th>
+										<td>Microsoft Tools (Word, Excel, PowerPoint, Visual Studio), Rational Rose, JBOSS, Toad for Oracle, SQLplus, ASP.NET</td>
+									</tr>
+									<tr>
+										<th>Database:</th>
+										<td>Oracle Database 11g, MS Access, MySQLi, SQL Server</td>
+									</tr>
+									<tr>
+										<th>Other:</th>
+										<td>ESRI ArcGIS, ArcGISOnline, LaTeX/MiKTeX, SVN, GitHub, Crystal Reports, Unreal Game Engine</td>
+									</tr>
+								</table>
+							</div>
+							
+							<div class="subsection">								
+								<h4><strong>EDUCATION</strong></h4>
+								<table class="table">
+									<tr>
+										<td>Advanced Diploma in Computer Programming and Analysis</br>Seneca College of Applied Arts and Technology, Toronto, Ontario</td>
+										<td>June 2018</td>					
+									</tr>
+									<tr>
+										<td>Honours Bachelor of Arts in Human Geography</br>University of Toronto, St. George Campus, Toronto, Ontario</td>
+										<td>June 2012</td>
+									</tr>
+								</table>
+							</div>
+							
+							<div class="subsection">								
+								<h4><strong>EXPERIENCE</strong></h4>
+								<table class="table">
+									<tr>
+										<td>
+											Programmer/Analyst</br>TTC, Toronto, Ontario
+											<ul>
+												<li>Made reports for bus maintenance workers using Crystal Reports.</li>
+												<li>Developed features for Employee Database in MS Access and VBA.</li>
+											</ul>
+										</td>
+										<td>May-Aug 2016</td>					
+									</tr>
+									<tr>					
+										<td>
+											Systems Developer/Designer Student</br>MPAC, Pickering, Ontario
+											<ul>
+												<li>Participated in development and testing of SQL and PL/SQL Oracle database update script.</li>
+												<li>Created GIS analysis and mapping on request, which improved coworkers' negotiation with customers.</li>
+												<li>Created Data Dictionary documentation of PL/SQL programs.</li>
+												<li>Performed analysis and made reports on streetview image availability for properties in MPAC database using GIS.</li>
+												<li>Participated in remapping of Java and Hibernate data extract program to new database.</li>
+											</ul>
+										</td>
+										<td>May-Dec 2015</td>					
+									</tr>
+									<tr>					
+										<td>
+											Administrator’s Assistant</br>Prata Technologies Inc., Toronto, Ontario
+											<ul>
+												<li>Participated in development of Hash Function/Authentication Project.</li>
+												<li>Wrote programming documentation and created PowerPoint presentations.</li>
+												<li>Designed and tested hardware verification programs in C.</li>
+												<li>Created automatic report generation in MiKTeX.</li>
+											</ul>
+										</td>
+										<td>Sept 2012 – Apr 2013</td>					
+									</tr>					
+								</table>
+							</div>
+							
+							<div class="subsection">								
+								<h4><strong>ACADEMIC PROJECTS</strong></h4>
+								<p><a href="index.html">See my projects</a></p>
+							</div>
+							
+						<!--	<div class="subsection">								
+								<h4><strong>INTERESTS</strong></h4>
+								<p>Drawing, painting, knitting, skiing.</p>
+							</div>-->
+							
+					</div>
+					
+					<div class="panel-footer">
+						
+						<p>Copyright 2018 Olga Arsenieva</p>
+						<p id="date">Last modified (Date)</p>
+						<script> document.getElementById("date").innerHTML = "Last updated " + document.lastModified; </script>
+					</div>
+			
+				</div>
+				<div class="col-sm-2">
+				</div>
+			</div>
+		</div>
+		
+		
+	</body>
+</html>

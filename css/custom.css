@@ -1,0 +1,60 @@
+/*
+This stylesheet provides custom styling for 
+Olga's Portfolio in addition to bootstrap*/
+
+	.navBar{
+		background-color:#6699CC;
+		font-size:18pt;
+		margin:0; 
+		padding:0;
+	}
+	
+	.navBar li a{
+		text-decoration:none;
+		padding:25px;
+		color:#FFFFFF;
+		font-family:'Times New Roman', Times, serif;
+	}
+
+	.navBar li:hover{
+		background-color:#99ccff;
+	}
+	
+	.pageBackground{
+/* ========================================================
+ This pattern is downloaded from www.subtlepatterns.com 
+ If you need more, that's where to get'em.
+ ======================================================== */
+		background-image: url("../images/symphony.png");
+	}
+	
+	div.pageContent{
+		margin:60px;
+		font-family:'Times New Roman', Times, serif;
+		font-size:18px;
+	}
+	
+	div.pageContent h1{
+		font-family:'Times New Roman', Times, serif;
+		font-weight:bold;
+		color:#6699CC; 
+		padding-bottom:40px;
+	}
+	
+	div.subsection{
+			margin-top:20px;
+			padding-bottom:20px;
+	}
+	
+	div.projectEntry{
+			margin-top:30px;
+			padding-bottom:40px;
+	}
+	
+	.panel-footer{
+		background-color:#6699CC;
+		color:#FFFFFF;
+		font-size:14pt;
+		font-family:'Times New Roman', Times, serif;
+		padding:30px;
+	}
