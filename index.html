@@ -1,23 +1,98 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		  <title>Portfolio</title>
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		  
+		  <script src="scripts/clock.js" type="text/javascript"></script>
+		  <script>
 
-<div class="home">
+		  
+				window.onload = function(){
+					var canvas = document.getElementById("canvasClock");
+					var context = canvas.getContext("2d");
+					var radius = canvas.height / 2;
+					context.translate(radius, radius);
+					radius = radius * 0.75;			
+					drawClock(context, radius);
+					setInterval(function(){drawClock(context, radius);}, 1000);
+				}
+				
+				
+		  </script>
+		  <link rel="stylesheet" href="custom.css" />
+	</head>
+	<body class="pageBackground">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-2">
+				</div>
+				<div class="col-sm-8" id="whitepanel" style="background-color: #ffffff;padding:0;">
+				
+					<nav class="navbar navbar-default navbar-static-top navBar" id="menu">
+						<div class="container-fluid">
+							<ul class="nav navbar-nav" >
+								<li><a href="index.html" style="color:#FFFFFF;" ><span class="glyphicon glyphicon-briefcase"></span>  Projects</a></li>
+								<li><a href="about.html" style="color:#FFFFFF;" ><span class="glyphicon glyphicon-user"></span>  About</a></li>
+								<li><a href="resume.html" style="color:#FFFFFF;" ><span class="glyphicon glyphicon-list-alt"></span>  Resume</a></li>
+								<li><a href="contact.html" style="color:#FFFFFF;" ><span class="glyphicon glyphicon-envelope"></span>  Contact</a></li>
+							</ul>	
+							<ul class="nav navbar-nav navbar-right" style="padding:0;">
+								<li><canvas id="canvasClock" data-toggle="tooltip" data-placement="bottom" title="Tiny clock!" style="margin-right:15px;margin-left:15px;margin-top:7px;" width="60" height="60" ></canvas></li>
+							</ul>
+						</div>
+					</nav>
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+					<div class="pageContent">		
+					
+							<h1>Olga Arsenieva's Portfolio</h1>
+								
+								<div class="projectEntry">
+									<h3><strong>Wecreu - (capstone project)</strong></h3>
+									<br />
+									<p>This web application was a group project with classmates to finish our Seneca program requirements of PRJ566 and PRJ666.<br />Wecreu generates an online store for a small business so they can save money on IT. It works by requiring a client company to register and select one of 4 templates. 
+									Then a script creates a new folder containing the company's new online store website. This online store website is hosted on the Wecreu server. The client company is able to input and edit the information on their site as well as manage inventory and post promotions.<br /><br />
+									Overall this project consisted of the Wecreu site with registration and account management capacity, 4 front-end templates, a database that holds company information, and multiple back-end scripts that deal with validation, database access and new website generation.
+									This project was worked on for 8 months January to August 2017, and it was planned by 4 people and implemented by 5. Originally we intended to generate entirely customizable websites, but we would only have 4 months to develop, so we decided that 4 templates would be more manageable in these time constraints.</p>
+									<p></br>
+										Environment: Apache Server, MySQLi database, Languages: PHP, HTML, CSS, JavaScript, Bootstrap Other: MyPHPadmin, Unix system Hosted on Seneca College Server. <br />
+										My contribution to this project consisted of:
+										<ul>
+											<li>Developing frontend and backend for managing inventory and database.</li>
+											<li>Collecting, validated user data from forms and stored it in MySQLi database.</li>
+											<li>Creation of one of the templates</li>
+											<li>Scripts for store check out</li>
+											<li>UI Mock ups for templates</li>
+											<li>Database Design and creation</li>
+											<li>Use cases and planning</li>
+											<li>Being group leader, taking notes on meetings, timesheets</li>
+										</ul>
+									</p>
+									<a href="http://myvmlab.senecacollege.ca:5726/wecreu/index.php"><img src="images/Wecreu.png" class="img-thumbnail" alt="Wecreu" /></a>
+									<br /><br /><hr />
+								</div>
+								
+								
+							<p><em>More to come!</em></p>
+						
+					</div>
+					
+			
+					<div class="panel-footer">
+						
+						<p>Copyright 2018 Olga Arsenieva</p>
+						<p id="date">Last modified (Date)</p>
+						<script> document.getElementById("date").innerHTML = "Last updated " + document.lastModified; </script>
+					</div>
+				</div>
+				<div class="col-sm-2">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
