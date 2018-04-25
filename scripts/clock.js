@@ -1,22 +1,18 @@
-// based on turoial from https://www.w3schools.com/graphics/canvas_clock.asp 
+//based on tutorial from https://www.w3schools.com/graphics/canvas_clock.asp 
+//adapted to look like a glyphicon clock and fit in portfolio menu :)
 
 function clockSetUp(){
-//	alert("clockSetUp called");
+	
 	var canvas = document.getElementById("canvasClock");
 	var context = canvas.getContext("2d");
 	var radius = canvas.height / 2;
 	context.translate(radius, radius);
 	radius = radius * 0.75;
-//	drawFace(context, radius);
-//	alert("setting interval");
-	
-	//setInterval(drawClock(context, radius), 1000);
-	
 }
 
 
 function drawClock(context, radius){
-	//alert("drawClock called");
+	
 	drawFace(context, radius);
 	drawTime(context, radius);
 }
@@ -43,7 +39,7 @@ function drawFace(context, radius){
 }
 
 function drawTime(context, radius){
-	//alert("drawTime called");
+	
 	var now = new Date();
 	var hour = now.getHours();
 	var minute = now.getMinutes();
